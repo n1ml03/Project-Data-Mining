@@ -8,7 +8,7 @@ Một hệ thống Data Driven Algorithmic Marketing cho Olist, sàn thương m�
 
 Marketing Analytics tại Olist giúp đo lường, quản lý và phân tích hiệu quả tiếp thị để tối đa hóa hiệu quả và tối ưu hóa ROI. Hiểu rõ Marketing analytics cho phép Olist giảm thiểu lãng phí ngân sách tiếp thị web bằng cách phân bổ ngân sách cho các chiến dịch mục tiêu, bỏ lỡ cơ hội do không thể hiển thị các đề xuất được cá nhân hóa theo sở thích của người dùng.
 
-![geo](Images/mapplot.png)
+![geo](Images/regions.png)
 
 ## Approach
 
@@ -63,16 +63,19 @@ Những người có hiệu suất kém nhất trong mô hình RFM của chúng 
 
 `pip3 install -r requirements.txt`
 
-### Download rslp stem
-`curl -OL https://raw.githubusercontent.com/nltk/nltk/develop/nltk/stem/rslp.py`
+### Download stemmer (OPEN IN NEW WINDOW)
 
-`mkdir stemmers & mv rslp.py stemmers/`
+`python3`
 
-`mv stemmers/ /usr/local/share/nltk_data/`
+`import nltk`
 
-### Run project
+`nltk.download('stopwords')`
 
-`cd 4.\ Streamlit\ Analytics\ Dashboard/`
+`nltk.download('rslp')`
+
+### Run project (RUN IN PREVIOUS WINDOW)
+
+`cd 4.\ Streamlit\ Analytics\ Dashboard/webapp`
 
 `python3 main.py`
 
