@@ -1,6 +1,6 @@
 import pandas as pd
 from googletrans import Translator
-from log.log_config import *
+import log.log_config
 
 
 def translate_reviews(predictions):
@@ -34,8 +34,8 @@ def main():
 
 if __name__ == "__main__":
     # Creating a logging object
-    logger = logging.getLogger(__name__)
-    logger = logger_config(logger, level=logging.DEBUG, filemode='a')
+    logger = log.log_config.logging.getLogger(__name__)
+    logger = log.log_config.logger_config(logger, level=log.log_config.logging.DEBUG, filemode='a')
 
     # Messages
     WARNING_MESSAGE = f'Module {__file__} finished with ERROR status'
@@ -48,11 +48,6 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(e)
         logger.warning(WARNING_MESSAGE)
-
-
-
-
-
 
 # import streamlit as st
 # import pandas as pd
