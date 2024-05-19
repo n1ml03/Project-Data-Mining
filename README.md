@@ -32,9 +32,9 @@ Việc hiểu khách hàng và đưa ra được những chiến lược marketi
 
 # Installation
 
-`git clone https://github.com/n1ml03/Olist-Marketing-Analytics.git`
+`git clone https://github.com/n1ml03/Project-Data-Mining.git`
 
-`cd Olist-Marketing-Analytics`
+`cd Project-Data-Mining`
 
 `pip3 install -r requirements.txt`
 
@@ -50,9 +50,9 @@ Việc hiểu khách hàng và đưa ra được những chiến lược marketi
 
 ### Run project (RUN IN PREVIOUS WINDOW)
 
-`cd 4.\ Streamlit\ Analytics\ Dashboard/webapp`
+`cd 5.\ Streamlit\ Analytics\ Dashboard/webapp`
 
-`python3 main.py`
+`streamlit run main.py`
 
 
 
