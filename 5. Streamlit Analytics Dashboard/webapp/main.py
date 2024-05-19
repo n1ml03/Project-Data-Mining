@@ -331,7 +331,7 @@ def sentiment():
     st.header("Search Reviews by Product ID")
     product_id = st.text_input("Enter Product ID:")
     if product_id:
-        filtered_reviews = predictions[predictions['product_id'] == product_id][['review', 'sentiment']]
+        filtered_reviews = predictions[predictions['product_id'] == product_id][['review', 'sentiment', 'probability']]
         if not filtered_reviews.empty:
             st.markdown(f"### Reviews for ID: {product_id}")
             st.dataframe(filtered_reviews.style.applymap(highlight_positive, subset=['sentiment']),

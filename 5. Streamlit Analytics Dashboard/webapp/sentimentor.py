@@ -51,6 +51,6 @@ class Sentimentor:
         df_results = DataFrame(results)
 
         # Exporting results
-        df_results.to_csv('sentiment_predictions.csv', index=False)
+        df_results.to_csv('data/sentiment_predictions.csv', index=False)
 
         return df_results
