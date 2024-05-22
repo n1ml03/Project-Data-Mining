@@ -294,20 +294,14 @@ def customer_segmentation_and_ltv():
     """)
 
     # 3. K-Means based Clusters (heatmap)
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.markdown('**_K-Means_ _based_ Clusters**')
-    relative_imp = pd.read_csv('./data/rel_imp.csv')
-    plt.figure(figsize=(13, 5))
-    plt.title('Relative importance of attributes')
-    fig2 = sns.heatmap(data=relative_imp, annot=True, fmt='.2f', cmap='RdYlGn')
-    plt.show()
-    st.pyplot()
-    st.write(fig2)
+    st.markdown('**Đặc điểm của các cụm**')
+    image11 = Image.open('./images/snake_plot.png')
+    st.image(image11, use_column_width=True)
     st.markdown("""
-    - **Cluster 0:** Nhóm khách hàng đóng góp nhiều nhất vào doanh thu. Họ mua sắm thường xuyên, chi tiêu hào phóng và đã mua hàng gần đây. Đây là phân khúc có giá trị nhất và là nhóm khách hàng mà chúng ta cần tập trung.
-    - **Cluster 1:** Những khách hàng có mức độ Recency (mức độ mua hàng gần đây), Frequency (tần suất mua hàng) và Monetary Value (giá trị tiền tệ) thấp. Cần thiết kế các chiến dịch nhắm mục tiêu để thu hút họ mua sắm trở lại.
-    - **Cluster 2:** Những khách hàng đã mua sắm gần đây, nhưng mức chi tiêu và tần suất mua hàng của họ thấp hơn mong muốn. Việc đề xuất sản phẩm phù hợp có thể giúp họ khám phá các mặt hàng mới, tăng giá trị đơn hàng và tối đa hóa giá trị của họ theo thời gian.
-    - **Cluster 3:** Nhóm có lịch sử chi tiêu khá tốt, nhưng việc họ không hoạt động trong vài tháng qua là điều đáng lo ngại. Để ngăn người dùng chuyển sang đối thủ cạnh tranh, cần can thiệp nhanh chóng với các ưu đãi và khuyến mãi chủ động để thu hút họ quay trở lại.
+    **Cụm 0 (đen)**: Cụm này có giá trị Recency trung bình, giá trị Monetary ở mức trung bình. Đây là những khách hàng "trung thành" mua hàng thường xuyên nhưng có thể chưa mua gần đây.
+    **Cụm 1 (tím)**: Cụm này có giá trị Recency ở mức cao nhất, giá trị Monetary thấp nhất. Đây là những khách hàng "tốt nhất" mua hàng thường xuyên, gần đây và chi tiêu nhiều nhất.
+    **Cụm 2 (đỏ)**: Cụm này có giá trị Recency thấp nhất (mua hàng lâu nhất), giá trị Monetary ở mức trung bình. Điều này cho thấy khách hàng trong cụm này là những khách hàng "mới" đã thực hiện một vài giao dịch nhưng chi tiêu một khoản tiền hợp lý.
+    **Cụm 3 (vàng)**: Cụm này có giá trị Recency ở mức trung bình, giá trị Monetary trung bình. Đây là những khách hàng "thỉnh thoảng" mua hàng với số lượng vừa phải nhưng không chi tiêu nhiều cho mỗi lần mua.
     """)
 
     # 4. Customer Lifetime Value (images)
