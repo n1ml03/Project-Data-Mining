@@ -9,7 +9,6 @@ Trong bài toán này, nhóm chúng em đề xuất phương pháp phân khúc k
 
 Việc hiểu khách hàng và đưa ra được những chiến lược marketing phù hợp là vô cùng quan trọng để tối đa doanh thu, tăng số lượng đơn đặt hàng cũng như khách hàng thân thiết, trung thành. 
 
-![geo](Images/mapplot.png)
 
 ## Các mục tiêu
 
